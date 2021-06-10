@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud Computing</title>
+</head>
+<body>
+    <h1>Srinija Katakam</h1>
+    <h1>1001861512</h1>
+   <center>  <img src="{{url_for('static', filename='jason.jpg')}}" />
+   </center>
+   
+   {% for table in tables %}
+   {{titles[loop.index]}}
+   {{ table|safe }}
+   {% endfor %}
+   
+   <table>
+       {% for key, value in result.iteritems() %}
+          <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+          </tr>
+       {% endfor %}
+       </table>
+    <a href="/"> Back </a>
+</body>
+</html>
